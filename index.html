@@ -7,7 +7,13 @@
   <body>
 
     <div id="directives">
-      <p>{{ message }}</p>
+      <h3>A basic custom element</h3>
+      <mini-coding-presentation></mini-coding-presentation>
+
+      <h3>A custom element with properties</h3>
+      <ul>
+        <language-description v-for="item in languages" v-bind:lan="item" v-bind:key="item.id"><language-description>
+      </ul>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
