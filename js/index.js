@@ -7,8 +7,8 @@ Vue.component('language-description', {
   template: '<li>Name: {{ lan.name }} -> Rating: {{ lan.rate }}</li>'
 })
 
-var directivesApp = new Vue({
-  el: '#directives',
+var componentsApp = new Vue({
+  el: '#components',
   data: {
     languages: [
       {id: 0, name: "Ruby", rate: 9},
