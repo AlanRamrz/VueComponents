@@ -7,13 +7,28 @@ Vue.component('language-description', {
   template: '<li>Name: {{ lan.name }} -> Rating: {{ lan.rate }}</li>'
 })
 
-var componentsApp = new Vue({
-  el: '#components',
+var custonComponentsApp = new Vue({
+  el: '#customComponents',
   data: {
     languages: [
       {id: 0, name: "Ruby", rate: 9},
       {id: 1, name: "Java", rate: 8},
       {id: 2, name: "JavaScript", rate: 10}
     ]
+  }
+})
+
+var basicComponentsApp = new Vue({
+  el: '#basicComponents',
+  data: {
+    inputChecked: true,
+    arrayChecked: [],
+    radio: '',
+    list: [
+      {text: 'JS', value: 'js'},
+      {text: 'Java', value: 'java'},
+      {text: 'Ruby', value: 'ruby'}
+    ],
+    selectedOption: ''
   }
 })

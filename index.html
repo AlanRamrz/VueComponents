@@ -6,7 +6,7 @@
   </head>
   <body>
 
-    <div id="components">
+    <div id="customComponents">
       <h3>A basic custom element</h3>
       <mini-coding-presentation></mini-coding-presentation>
 
@@ -14,6 +14,45 @@
       <ul>
         <language-description v-for="item in languages" v-bind:lan="item" v-bind:key="item.id"><language-description>
       </ul>
+    </div>
+
+    <br><br>
+
+    <div id="basicComponents">
+      <h3>A basic input type check</h3>
+      <input type="checkbox" v-model="inputChecked">
+      <label>{{ inputChecked }}</label>
+
+      <h3>An array of checkbox</h3>
+      <label>JS</label>
+      <input type="checkbox" v-model="arrayChecked" value="JS">
+      <br>
+      <label>Java</label>
+      <input type="checkbox" v-model="arrayChecked" value="Java">
+      <br>
+      <label>Ruby</label>
+      <input type="checkbox" v-model="arrayChecked" value="Ruby">
+      <br>
+      <label>You love: {{ arrayChecked }}</label>
+
+      <h3>Radio buttons</h3>
+      <label>Vue</label>
+      <input type="radio" value="vue" v-model="radio">
+      <br>
+      <label>Angular</label>
+      <input type="radio" value="angular" v-model="radio">
+      <br>
+      <label>React</label>
+      <input type="radio" value="react" v-model="radio">
+      <br>
+      <label>Your favourite framework is {{ radio }}</label>
+
+      <h3>Select list</h3>
+      <select v-model="selectedOption">
+        <option v-for="item in list" v-bind:value="item.value">{{ item.text }}</option>
+      </select>
+      <br>
+      <label>You choose {{ selectedOption }}</label>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
