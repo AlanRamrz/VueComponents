@@ -7,6 +7,28 @@ Vue.component('language-description', {
   template: '<li>Name: {{ lan.name }} -> Rating: {{ lan.rate }}</li>'
 })
 
+Vue.component('counter',{
+  template: `<div>
+              <button v-on:click="decrease">-</button>
+              <label>{{ count }}</label>
+              <button v-on:click="increment">+</button>
+            </div>`,
+  //As a function so every element has its own counter
+  data: function(){
+    return{
+      count: 0
+    }
+  },
+  methods: {
+    increment: function(){
+      this.count++
+    },
+    decrease: function(){
+      this.count--
+    }
+  }
+})
+
 var custonComponentsApp = new Vue({
   el: '#customComponents',
   data: {
